@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html>
-
-  {% include head.html %}
+<html lang="en-us">
   
+  {% include head.html %}
+
   <body>
-	
-	<div class="main-wrapper">
-		{% include header.html %}
-		{% include banner.html %}
-		{{content}}
-		{% if !page.comment %}
-			{% include comments.html %}
-		{% endif %}
-		{% include footer.html %}
-	</div>
-	
+    {% include page-header.html %}
+
+    <section class="main-content">
+      
+      {{ content }}
+
+      {% include page-footer.html %}
+
+    </section>
+
   </body>
-  {% include analytics.html %}
 </html>
